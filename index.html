@@ -317,7 +317,6 @@
         <tr><td class="snum">30</td><td class="smetric">体験実施（日程経過）</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">体験日程[列Q] ≤ 2026/8/5（基準日）の行数。日程を過ぎた＝実施とみなした値</td></tr>
         <tr><td class="snum">29</td><td class="smetric">体験実施（報告済み）</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">体験完了[列S]="True" の行数。講師の実施報告で確定した数。日程経過30との差1は無断キャンセル（8/2鈴木さん）</td></tr>
         <tr><td class="snum">17</td><td class="smetric">今後の体験予約</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">体験日程[列Q] > 2026/8/5 の行数</td></tr>
-        <tr><td class="snum">2</td><td class="smetric">入会規約 同意</td><td><span class="ssheet">入会規約同意＋Slack</span></td><td class="scond">入会規約同意シートで野間さん[列C]=True、伊藤さんはSlackで月2回入会報告。うち決済完了は伊藤さん1名</td></tr>
         <tr><td class="snum">1</td><td class="smetric">入会規約 同意</td><td><span class="ssheet">入会規約同意</span></td><td class="scond">同意[列C]="True" の行数（野間万莉絵さん・8/1）。決済完了（クレカ登録[列AA]）はまだ0件</td></tr>
         <tr><td class="snum">70</td><td class="smetric">LINEで反応（返信）</td><td><span class="ssheet">LINE受信メッセージ一覧</span></td><td class="scond">返信のあったユニークユーザー数（Slack共有の集計値）</td></tr>
         <tr><td class="snum">新設</td><td class="smetric">流入経路ID</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">流入経路ID[列C]。route付きURL経由の友だち登録元を記録（8/5実装）。Instagram/YouTube等の外部流入の効果測定用でこれから蓄積</td></tr>
@@ -432,7 +431,7 @@
   </div>
   <div class="fnote">
     <b>全体像：</b>LINE登録365人を母集団に、同意75件 → 予約47名 → 実施29件（報告ベース／日程経過30） → <b>初の入会規約同意1名（8/1・野間万莉絵さん）</b>まで到達。決済完了はまだ0件で、ここが次の関門。<br>
-    <b>⚠ 注意点：</b>③同意はフォーム受け口が2系統（自社製フォーム＝台帳61件／Googleフォーム＝回答68件）あり、取りこぼしの指摘あり。68が上限・61が確実の幅で見る。⑤実施は「体験完了」列[列S]=Trueの報告ベース29件を主指標に（日程経過ベースは30件、差1は8/2の無断キャンセル）。実施報告の運用が本格稼働し、Falseは残り1件まで減った。⑥入会は入会規約同意シートで野間さんがTrue＋伊藤さんがSlackで月2回入会報告の計2名、うち伊藤さんが決済完了。
+    <b>⚠ 注意点：</b>③同意はフォーム受け口が2系統（自社製フォーム＝台帳61件／Googleフォーム＝回答68件）あり、取りこぼしの指摘あり。68が上限・61が確実の幅で見る。⑤実施は「体験完了」列[列S]=Trueの報告ベース29件を主指標に（日程経過ベースは30件、差1は8/2の無断キャンセル）。実施報告の運用が本格稼働し、Falseは残り1件まで減った。⑥入会規約同意は入会規約同意シートで野間万莉絵さん1名がTrue。決済完了（クレカ登録）はまだ0件で、ここが次の関門。
   </div>
 
   <div class="sec"><span class="no">5</span><h2>レッスン実施サマリー</h2><span class="cap">「予約」と「実施」を分けて見る。実施はここが最重要指標。</span></div>
@@ -696,7 +695,7 @@
   <footer>
     Studio LUMINA 事業ダッシュボード<br>
     出典：Slack #proj-ボイトレ事業-studio-lumina のメッセージ・スレッド、および共有Google Drive（覚書・利用規約・重要事項表示・営業資料）。<br>
-    数値・ステータスは2026年8月5日時点。ファネル実数（LINE登録・同意・予約・実施・入会）は共有Drive「LUMINA顧客管理」スプレッドの実データを集計。実施は「体験完了」列=Trueの報告ベース29件を主指標に（日程経過ベースは30件、差1は無断キャンセル）。入会は入会規約同意シートで野間さんがTrue＋伊藤さんがSlackで月2回入会報告の計2名・うち1名が決済完了。同意はフォーム受け口2系統で61〜75件の幅。転換率のルートA/BはLUMINAアタック数値シートに準拠。8/5にroute別の流入経路ID列が新設された。
+    数値・ステータスは2026年8月5日時点。ファネル実数（LINE登録・同意・予約・実施・入会）は共有Drive「LUMINA顧客管理」スプレッドの実データを集計。実施は「体験完了」列=Trueの報告ベース29件を主指標に（日程経過ベースは30件、差1は無断キャンセル）。入会規約同意は入会規約同意シートで野間万莉絵さん1名がTrue。決済完了（クレカ登録）はまだ0件。同意はフォーム受け口2系統で61〜75件の幅。転換率のルートA/BはLUMINAアタック数値シートに準拠。8/5にroute別の流入経路ID列が新設された。
   </footer>
 
 </div>
