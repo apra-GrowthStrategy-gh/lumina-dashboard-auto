@@ -291,14 +291,14 @@
 
   <div class="verdict">
     <div class="vh">サマリー</div>
-    <p>LUMINAは<b>「設計」から「稼働」フェーズ</b>に移行済み。顧客管理スプレッドの実データでは、<b>LINE登録365人・フォーム同意61〜75件・体験予約47名（うち体験実施30件・実施報告済み29件）</b>まで進行。<b>8/2に初の本入会者（伊藤亮太さん・月2回プラン）が誕生</b>し、長らく0件だった最大のボトルネックを突破。実施報告（体験完了フラグ）も29件まで稼働し、実施計測が本格化した。8/5時点の主要な進行施策は<b>①入会者の積み増し（実施→入会の転換）</b>、<b>②流入経路分析の実装（route別トラッキング）とYouTube等の外部集客</b>、<b>③インターネット広告の出稿（予算14万円・1万円/日×2週間）</b>。<span class="maneki-only">同時配信のまねきクーポン枠7,170人はLUMINAへ直接コンバージョンしない別導線のため、LUMINAの母数からは分離して扱う（上部トグルで表示切り替え可能）。</span></p>
+    <p>LUMINAは<b>「設計」から「稼働」フェーズ</b>に移行済み。顧客管理スプレッドの実データでは、<b>LINE登録365人・フォーム同意61〜75件・体験予約47名（うち体験実施30件・実施報告済み29件）</b>まで進行。<b>8/1に初の入会規約同意者（野間万莉絵さん）が誕生</b>し、長らく0件だった最大のボトルネックに風穴。実施報告（体験完了フラグ）も29件まで稼働し、実施計測が本格化した。8/5時点の主要な進行施策は<b>①入会者の積み増し（実施→入会の転換）</b>、<b>②流入経路分析の実装（route別トラッキング）とYouTube等の外部集客</b>、<b>③インターネット広告の出稿（予算14万円・1万円/日×2週間）</b>。<span class="maneki-only">同時配信のまねきクーポン枠7,170人はLUMINAへ直接コンバージョンしない別導線のため、LUMINAの母数からは分離して扱う（上部トグルで表示切り替え可能）。</span></p>
   </div>
 
   <div class="kpis" id="kpis">
     <div class="kpi c1"><div class="n"><span data-kpi="line-n">365</span><small>人</small></div><div class="l">LINE公式登録者</div><div class="s" data-kpi="line-sub">6/10〜8/4で積み上がり</div></div>
     <div class="kpi c2"><div class="n"><span data-kpi="consent-n">75</span><small>件</small></div><div class="l">無料体験フォーム同意</div><div class="s" data-kpi="consent-sub">台帳化確実は61件</div></div>
     <div class="kpi c3"><div class="n"><span data-kpi="reserve-n">47</span><small>名</small></div><div class="l">体験予約（実人数）</div><div class="s" data-kpi="reserve-sub">のべ47件・実施報告済み29件</div></div>
-    <div class="kpi c4"><div class="n"><span data-kpi="join-n">1</span><small>件</small></div><div class="l">本入会 🎉</div><div class="s" data-kpi="join-sub">8/2初入会・月2回プラン</div></div>
+    <div class="kpi c4"><div class="n"><span data-kpi="join-n">1</span><small>名</small></div><div class="l">入会規約同意</div><div class="s" data-kpi="join-sub">決済完了はこれから</div></div>
   </div>
   <div class="legend">
     <span><i style="background:var(--done)"></i>完了・稼働中</span>
@@ -318,7 +318,7 @@
         <tr><td class="snum">29</td><td class="smetric">体験実施（報告済み）</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">体験完了[列S]="True" の行数。講師の実施報告で確定した数。日程経過30との差1は無断キャンセル（8/2鈴木さん）</td></tr>
         <tr><td class="snum">17</td><td class="smetric">今後の体験予約</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">体験日程[列Q] > 2026/8/5 の行数</td></tr>
         <tr><td class="snum">2</td><td class="smetric">入会規約 同意</td><td><span class="ssheet">入会規約同意＋Slack</span></td><td class="scond">入会規約同意シートで野間さん[列C]=True、伊藤さんはSlackで月2回入会報告。うち決済完了は伊藤さん1名</td></tr>
-        <tr><td class="snum">1</td><td class="smetric">本入会（決済完了）</td><td><span class="ssheet">Slack報告</span></td><td class="scond">伊藤亮太さん・月2回プランで決済完了。顧客管理のクレカ登録[列AA]・入会プラン[列AB]は反映待ち</td></tr>
+        <tr><td class="snum">1</td><td class="smetric">入会規約 同意</td><td><span class="ssheet">入会規約同意</span></td><td class="scond">同意[列C]="True" の行数（野間万莉絵さん・8/1）。決済完了（クレカ登録[列AA]）はまだ0件</td></tr>
         <tr><td class="snum">70</td><td class="smetric">LINEで反応（返信）</td><td><span class="ssheet">LINE受信メッセージ一覧</span></td><td class="scond">返信のあったユニークユーザー数（Slack共有の集計値）</td></tr>
         <tr><td class="snum">新設</td><td class="smetric">流入経路ID</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">流入経路ID[列C]。route付きURL経由の友だち登録元を記録（8/5実装）。Instagram/YouTube等の外部流入の効果測定用でこれから蓄積</td></tr>
         <tr><td class="snum">124/54<br>/8/3</td><td class="smetric">ルートB 各段<br>（MP+登録必須）</td><td><span class="ssheet">LUMINAアタック数値</span></td><td class="scond">タップ/登録/同意/日程確定。旧MP LUMINA0721発射リスト2,500人の行</td></tr>
@@ -428,10 +428,10 @@
     <div class="farrow">▼ <span style="font-size:11px;opacity:.7">予約→実施 62%</span></div>
     <div class="fstage f5"><div class="inner"><div class="fn">29件</div><div class="fl">⑤ 無料体験レッスン実施</div><div class="fs">体験完了フラグで確定した実施報告ベース。日程経過は30件、今後予約17件</div></div></div>
     <div class="farrow">▼ <span style="font-size:11px;opacity:.7">実施→入会 3.4%</span></div>
-    <div class="fstage f6"><div class="inner"><div class="fn">1件</div><div class="fl">⑥ 本入会 🎉</div><div class="fs">8/2初入会（伊藤亮太・月2回）・規約同意は2名</div></div></div>
+    <div class="fstage f6"><div class="inner"><div class="fn">1名</div><div class="fl">⑥ 入会規約同意 🎉</div><div class="fs">8/1 野間万莉絵さん・決済完了はこれから</div></div></div>
   </div>
   <div class="fnote">
-    <b>全体像：</b>LINE登録365人を母集団に、同意75件 → 予約47名 → 実施29件（報告ベース／日程経過30） → <b>初の本入会1件（8/2・伊藤亮太・月2回）</b>まで到達。入会規約同意は2名で、うち1名が決済まで完了。<br>
+    <b>全体像：</b>LINE登録365人を母集団に、同意75件 → 予約47名 → 実施29件（報告ベース／日程経過30） → <b>初の入会規約同意1名（8/1・野間万莉絵さん）</b>まで到達。決済完了はまだ0件で、ここが次の関門。<br>
     <b>⚠ 注意点：</b>③同意はフォーム受け口が2系統（自社製フォーム＝台帳61件／Googleフォーム＝回答68件）あり、取りこぼしの指摘あり。68が上限・61が確実の幅で見る。⑤実施は「体験完了」列[列S]=Trueの報告ベース29件を主指標に（日程経過ベースは30件、差1は8/2の無断キャンセル）。実施報告の運用が本格稼働し、Falseは残り1件まで減った。⑥入会は入会規約同意シートで野間さんがTrue＋伊藤さんがSlackで月2回入会報告の計2名、うち伊藤さんが決済完了。
   </div>
 
@@ -500,7 +500,7 @@
       <div class="barrow"><div class="bl">③ フォーム同意</div><div class="bt"><div class="bf" style="width:20.5%;background:#C98A1E">75</div></div><div class="bpct">21%</div></div>
       <div class="barrow"><div class="bl">④ 体験予約（実人数）</div><div class="bt"><div class="bf" style="width:12.9%;background:#D9542A">47</div></div><div class="bpct">13%</div></div>
       <div class="barrow"><div class="bl">⑤ 体験実施（報告済）</div><div class="bt"><div class="bf" style="width:7.9%;background:#A83B18;min-width:28px">29</div></div><div class="bpct">7.9%</div></div>
-      <div class="barrow"><div class="bl">⑥ 本入会</div><div class="bt"><div class="bf" style="width:2%;background:#2E7D6F;min-width:22px">1</div></div><div class="bpct">0.3%</div></div>
+      <div class="barrow"><div class="bl">⑥ 入会規約同意</div><div class="bt"><div class="bf" style="width:2%;background:#2E7D6F;min-width:22px">1</div></div><div class="bpct">0.3%</div></div>
       </div>
     </div>
 
@@ -596,7 +596,7 @@
     <div class="ev done"><div class="d">6/16〜6/24</div><h4>LINE一斉配信スタート（AB第一弾）<span class="badge b-done">完了</span></h4><p>新MP LINE 1,929人／不合格属性255人へ配信＆シナリオ再開。旧MP 6,388人にはBUMP施策も併走。</p></div>
     <div class="ev done"><div class="d">7/10</div><h4>プロジェクト開始以来 初の無料体験レッスン<span class="badge b-done">完了</span></h4><p>初日で2件の予約。以降フォーム同意（＝申込）が連日着信し、予約が積み上がる状態に。</p></div>
     <div class="ev done"><div class="d">7/11〜</div><h4>体験実施が進行（実施報告29件）<span class="badge b-done">完了</span></h4><p>7/11の2名（鳥越・小林）を皮切りに、8/5時点で実施報告（体験完了フラグ）が29件。特に8/1〜4で11件を消化し、体験の実施が一気に加速。予約は実人数47名まで積み上がり、今後の予約17件が控える。</p></div>
-    <div class="ev done"><div class="d">8/2</div><h4>🎉 プロジェクト開始以来 初の本入会<span class="badge b-done">完了</span></h4><p>伊藤亮太さんが月2回プランで入会。長らく0件だった本入会の最初の1件が生まれ、ファネルが最下流まで貫通した。8/1に野間万莉絵さんも入会規約に同意しており、規約同意ベースでは2名。8/3にはさらに別の入会希望者も出て、複数プランの日程調整が動き始めた。</p></div>
+    <div class="ev done"><div class="d">8/1〜8/3</div><h4>🎉 初の入会規約同意者が誕生<span class="badge b-done">完了</span></h4><p>野間万莉絵さんが8/1に入会規約へ同意。長らく0件だった入会規約同意の最初の1名が生まれ、ファネルが最下流手前まで到達した。8/3には伊藤さんが「初の入会者が出た（月2回プラン）」とチームに共有。決済完了（クレカ登録）はまだスプレッド未反映で、ここが次の関門。複数プランの日程調整も動き始めた。</p></div>
     <div class="ev done"><div class="d">8/2</div><h4>本入会システムが本格稼働（フォーム→プラン選択→Stripe）<span class="badge b-done">完了</span></h4><p>入会規約フォーム送信→プラン選択ページ→Stripe決済への遷移を瀧澤さんが実装（ChatGPTでホスティングしたページをGCPへ移設、Stripeのシークレットキーは秘匿化済み）。当初は体験フォームと入会フォームのwebhookエンドポイントが共通で文言誤配信が起きたが、formTypeでの分岐で解消。Stripe通知もSlackにIntegration追加。</p></div>
     <div class="ev done"><div class="d">8/3〜8/4</div><h4>実施報告フローが稼働・体験申込が連日着信<span class="badge b-done">完了</span></h4><p>「無料体験レッスン完了報告」シートで講師が実施結果を記録する運用が始動し、体験完了フラグが29件までTrue化。北原龍ノ介さん・小林広平さん・江口咲希さん・井上菜穂子さんら体験規約同意が連日入り、予約が積み上がる。8/2にレッスンに来なかった1件（無断キャンセル）も報告で可視化された。</p></div>
     <div class="ev prog"><div class="d">8/4〜8/5</div><h4>流入経路分析（route別トラッキング）を実装<span class="badge b-prog">進行中</span></h4><p>伊藤さんがGASのURL末尾にroute文字列を付与し、その経由の友だち登録元を顧客管理シートのC列（流入経路ID）に自動記録する仕組みを実装。Instagram・YouTube等の外部流入を経路別に効果測定できるように。城尾さんがLUMINAのデイリー対応（レポート）も開始。YouTube流入で反応のなかった70〜80名にもLUMINA案内を送付。</p></div>
@@ -690,7 +690,7 @@
 
   <div class="risk">
     <h3>握っておきたい論点</h3>
-    <p><b>①実施→入会の転換（最重要）</b>——予約47名・実施報告29件まで進み、8/2に初の本入会（伊藤亮太・月2回）が誕生。ファネルは最下流まで貫通した。ここからは<b>実施した人をどれだけ入会に転換できるか</b>が主戦場。実施29に対し入会1・規約同意2で、転換率の改善が最重要KPIに。「支払い登録しても受講開始が先」問題（初月月謝の扱い・受講開始タイミングの見せ方）が入会率に直接効く。　<b>②入会システムの安定化</b>——8/2稼働の入会フロー（フォーム→プラン選択→Stripe）は、体験フォームとwebhookエンドポイント共通による文言誤配信が発生し、formType分岐で解消済み。決済まわりの安定運用とStripe通知の監視が要る。　<b>③流入経路の効果測定</b>——8/5にroute別トラッキング（流入経路ID列）を実装。Instagram・YouTube等の外部流入をこれから経路別に評価し、獲得効率の良い導線に寄せていく段階。実施報告フローは「無料体験レッスン完了報告」シートで稼働し、Falseは残り1件まで減った。　<b>④MP+登録ハードルのトレードオフ</b>——2ルート比較で、MP+登録必須（ルートB・伊藤さん）は配信母数比の日程確定CVR 0.12%とルートA（0.47%）を下回る。登録という1段のハードルが体験到達数を削る一方、LINE登録→規約同意はB 14.8%＞A 11%と登録者の本気度は高い。加えてルートAはボタンタップ→LINE登録で4割強が離脱（登録到達56.9%）。　<b>⑤広告出稿フェーズの費用対効果</b>——14万円/2週間の広告出稿を開始。継続はFORITのCPAで判断予定。　<b>⑥アカウント獲得ユニットとのカニバリ</b>——まねき等の別導線は上部トグルで切り替え表示にする方針で合意。</p>
+    <p><b>①実施→入会の転換（最重要）</b>——予約47名・実施報告29件まで進み、8/1に初の入会規約同意（野間万莉絵さん）が誕生。ファネルは最下流手前まで到達した。ここからは<b>実施した人をどれだけ入会・決済に転換できるか</b>が主戦場。実施29に対し規約同意1・決済完了0で、転換率の改善が最重要KPIに。「支払い登録しても受講開始が先」問題（初月月謝の扱い・受講開始タイミングの見せ方）が入会率に直接効く。　<b>②入会システムの安定化</b>——8/2稼働の入会フロー（フォーム→プラン選択→Stripe）は、体験フォームとwebhookエンドポイント共通による文言誤配信が発生し、formType分岐で解消済み。決済まわりの安定運用とStripe通知の監視が要る。　<b>③流入経路の効果測定</b>——8/5にroute別トラッキング（流入経路ID列）を実装。Instagram・YouTube等の外部流入をこれから経路別に評価し、獲得効率の良い導線に寄せていく段階。実施報告フローは「無料体験レッスン完了報告」シートで稼働し、Falseは残り1件まで減った。　<b>④MP+登録ハードルのトレードオフ</b>——2ルート比較で、MP+登録必須（ルートB・伊藤さん）は配信母数比の日程確定CVR 0.12%とルートA（0.47%）を下回る。登録という1段のハードルが体験到達数を削る一方、LINE登録→規約同意はB 14.8%＞A 11%と登録者の本気度は高い。加えてルートAはボタンタップ→LINE登録で4割強が離脱（登録到達56.9%）。　<b>⑤広告出稿フェーズの費用対効果</b>——14万円/2週間の広告出稿を開始。継続はFORITのCPAで判断予定。　<b>⑥アカウント獲得ユニットとのカニバリ</b>——まねき等の別導線は上部トグルで切り替え表示にする方針で合意。</p>
   </div>
 
   <footer>
