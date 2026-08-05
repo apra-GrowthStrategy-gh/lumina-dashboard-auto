@@ -10,15 +10,15 @@
       "sub": "6/10〜最新で積み上がり"
     },
     "consent": {
-      "n": 0,
+      "n": 76,
       "sub": "台帳化確実は61件"
     },
     "reserve": {
       "n": 48,
-      "sub": "のべ48件・実施報告済み0件"
+      "sub": "のべ48件・実施報告済み29件"
     },
     "join": {
-      "n": 0,
+      "n": 1,
       "sub": "8/2初入会・月2回プラン"
     }
   },
@@ -28,20 +28,20 @@
   "funnel_down": {
     "line": 366,
     "reaction": 70,
-    "consent": 0,
+    "consent": 76,
     "consent_certain": 61,
     "reserve": 48,
-    "execute_reported": 0,
+    "execute_reported": 29,
     "execute_elapsed": 30,
     "future_reserve": 18,
-    "join": 0,
-    "terms_agree": 0,
+    "join": 1,
+    "terms_agree": 1,
     "rates": {
       "reaction": "19%",
-      "consent": "0%",
-      "consent_to_reserve": "0%",
-      "reserve_to_execute": "0%",
-      "execute_to_join": "0%"
+      "consent": "21%",
+      "consent_to_reserve": "63%",
+      "reserve_to_execute": "60%",
+      "execute_to_join": "3%"
     }
   },
   "dist": {
