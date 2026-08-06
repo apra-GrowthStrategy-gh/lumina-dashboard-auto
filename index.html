@@ -79,6 +79,7 @@
   .f4{background:linear-gradient(100deg,#D9542A,#E56B3E);width:48%}
   .f5{background:linear-gradient(100deg,#A83B18,#C64B2C);width:30%}
   .f6{background:linear-gradient(100deg,#6b6f76,#8a8f98);width:18%}
+  .f7{background:linear-gradient(100deg,#2E7D6F,#3a9384);width:12%}
   .farrow{font-size:14px;color:var(--ink2);opacity:.5;margin:-2px 0 4px}
   .fnote{margin-top:10px;background:var(--paper2);border-radius:12px;padding:12px 16px;font-size:12px;color:var(--ink2);text-align:center;line-height:1.7}
   .fnote b{color:var(--ink)}
@@ -306,7 +307,7 @@
     <div class="kpi c1"><div class="n"><span data-kpi="line-n">365</span><small>人</small><span class="delta flat" data-delta="line"></span></div><div class="l">LINE公式登録者</div><div class="s" data-kpi="line-sub">6/10〜8/4で積み上がり</div></div>
     <div class="kpi c2"><div class="n"><span data-kpi="consent-n">75</span><small>件</small><span class="delta flat" data-delta="consent"></span></div><div class="l">無料体験フォーム同意</div><div class="s" data-kpi="consent-sub">台帳化確実は61件</div></div>
     <div class="kpi c3"><div class="n"><span data-kpi="reserve-n">47</span><small>名</small><span class="delta flat" data-delta="reserve"></span></div><div class="l">体験予約（実人数）</div><div class="s" data-kpi="reserve-sub">のべ47件・実施報告済み29件</div></div>
-    <div class="kpi c4"><div class="n"><span data-kpi="join-n">1</span><small>名</small><span class="delta flat" data-delta="terms"></span></div><div class="l">入会規約同意</div><div class="s" data-kpi="join-sub">決済完了はこれから</div></div>
+    <div class="kpi c4"><div class="n"><span data-kpi="join-n">2</span><small>名</small><span class="delta flat" data-delta="terms"></span></div><div class="l">入会規約同意</div><div class="s" data-kpi="join-sub">決済完了はこれから</div></div>
   </div>
   <div class="legend">
     <span><i style="background:var(--done)"></i>完了・稼働中</span>
@@ -325,7 +326,7 @@
         <tr><td class="snum">30</td><td class="smetric">体験実施（日程経過）</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">体験日程[列Q] ≤ 2026/8/5（基準日）の行数。日程を過ぎた＝実施とみなした値</td></tr>
         <tr><td class="snum">29</td><td class="smetric">体験実施（報告済み）</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">体験完了[列S]="True" の行数。講師の実施報告で確定した数。日程経過30との差1は無断キャンセル（8/2鈴木さん）</td></tr>
         <tr><td class="snum">17</td><td class="smetric">今後の体験予約</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">体験日程[列Q] > 2026/8/5 の行数</td></tr>
-        <tr><td class="snum">1</td><td class="smetric">入会規約 同意</td><td><span class="ssheet">入会規約同意</span></td><td class="scond">同意[列C]="True" の行数（野間万莉絵さん・8/1）。決済完了（クレカ登録[列AA]）はまだ0件</td></tr>
+        <tr><td class="snum">2</td><td class="smetric">入会規約 同意</td><td><span class="ssheet">入会規約同意</span></td><td class="scond">同意[列C]="True" の行数（野間さん8/1・小池さん8/6）。決済完了（クレカ登録[列AA]）はまだ0件</td></tr>
         <tr><td class="snum">70</td><td class="smetric">LINEで反応（返信）</td><td><span class="ssheet">LINE受信メッセージ一覧</span></td><td class="scond">返信のあったユニークユーザー数（Slack共有の集計値）</td></tr>
         <tr><td class="snum">新設</td><td class="smetric">流入経路ID</td><td><span class="ssheet">ボイトレ顧客管理</span></td><td class="scond">流入経路ID[列C]。route付きURL経由の友だち登録元を記録（8/5実装）。Instagram/YouTube等の外部流入の効果測定用でこれから蓄積</td></tr>
         <tr><td class="snum">124/54<br>/8/3</td><td class="smetric">ルートB 各段<br>（MP+登録必須）</td><td><span class="ssheet">LUMINAアタック数値</span></td><td class="scond">タップ/登録/同意/日程確定。旧MP LUMINA0721発射リスト2,500人の行</td></tr>
@@ -434,12 +435,14 @@
     <div class="fstage f4"><div class="inner"><div class="fn">47名</div><div class="fl">④ 無料体験レッスン予約</div><div class="fs">のべ47件・実人数47名（日程確定ベース）</div></div></div>
     <div class="farrow">▼ <span style="font-size:11px;opacity:.7">予約→実施 62%</span></div>
     <div class="fstage f5"><div class="inner"><div class="fn">29件</div><div class="fl">⑤ 無料体験レッスン実施</div><div class="fs">体験完了フラグで確定した実施報告ベース。日程経過は30件、今後予約17件</div></div></div>
-    <div class="farrow">▼ <span style="font-size:11px;opacity:.7">実施→入会 3.4%</span></div>
-    <div class="fstage f6"><div class="inner"><div class="fn">1名</div><div class="fl">⑥ 入会規約同意 🎉</div><div class="fs">8/1 野間万莉絵さん・決済完了はこれから</div></div></div>
+    <div class="farrow">▼ <span style="font-size:11px;opacity:.7">実施→同意 3.4%</span></div>
+    <div class="fstage f6"><div class="inner"><div class="fn">2名</div><div class="fl">⑥ 入会規約同意</div><div class="fs">野間さん(8/1)・小池さん(8/6)</div></div></div>
+    <div class="farrow">▼ <span style="font-size:11px;opacity:.7" data-frate="terms-join">同意→決済 0%</span></div>
+    <div class="fstage f7"><div class="inner"><div class="fn"><span data-funnel="join">0</span>名</div><div class="fl">⑦ 決済完了（本入会）🎉</div><div class="fs">クレカ登録＝True。ファネルの最終ゴール</div></div></div>
   </div>
   <div class="fnote">
-    <b>全体像：</b>LINE登録365人を母集団に、同意75件 → 予約47名 → 実施29件（報告ベース／日程経過30） → <b>初の入会規約同意1名（8/1・野間万莉絵さん）</b>まで到達。決済完了はまだ0件で、ここが次の関門。<br>
-    <b>⚠ 注意点：</b>③同意はフォーム受け口が2系統（自社製フォーム＝台帳61件／Googleフォーム＝回答68件）あり、取りこぼしの指摘あり。68が上限・61が確実の幅で見る。⑤実施は「体験完了」列[列S]=Trueの報告ベース29件を主指標に（日程経過ベースは30件、差1は8/2の無断キャンセル）。実施報告の運用が本格稼働し、Falseは残り1件まで減った。⑥入会規約同意は入会規約同意シートで野間万莉絵さん1名がTrue。決済完了（クレカ登録）はまだ0件で、ここが次の関門。
+    <b>全体像：</b>LINE登録365人を母集団に、同意75件 → 予約47名 → 実施29件（報告ベース／日程経過30） → <b>入会規約同意2名（野間さん8/1・小池さん8/6）→ 決済完了0名</b>まで到達。規約に同意したこの2名を決済完了（本入会）へ運ぶのが、いまファネル最後の関門。<br>
+    <b>⚠ 注意点：</b>③同意はフォーム受け口が2系統（自社製フォーム＝台帳61件／Googleフォーム＝回答68件）あり、取りこぼしの指摘あり。68が上限・61が確実の幅で見る。⑤実施は「体験完了」列[列S]=Trueの報告ベース29件を主指標に（日程経過ベースは30件、差1は8/2の無断キャンセル）。実施報告の運用が本格稼働し、Falseは残り1件まで減った。⑥入会規約同意は入会規約同意シートで2名がTrue（野間さん8/1・小池さん8/6）。決済完了（クレカ登録）はまだ0件で、ここが次の関門。
   </div>
 
   <div class="sec"><span class="no">5</span><h2>レッスン実施サマリー</h2><span class="cap">「予約」と「実施」を分けて見る。実施はここが最重要指標。</span></div>
@@ -507,7 +510,8 @@
       <div class="barrow"><div class="bl">③ フォーム同意</div><div class="bt"><div class="bf" style="width:20.5%;background:#C98A1E">75</div></div><div class="bpct">21%</div></div>
       <div class="barrow"><div class="bl">④ 体験予約（実人数）</div><div class="bt"><div class="bf" style="width:12.9%;background:#D9542A">47</div></div><div class="bpct">13%</div></div>
       <div class="barrow"><div class="bl">⑤ 体験実施（報告済）</div><div class="bt"><div class="bf" style="width:7.9%;background:#A83B18;min-width:28px">29</div></div><div class="bpct">7.9%</div></div>
-      <div class="barrow"><div class="bl">⑥ 入会規約同意</div><div class="bt"><div class="bf" style="width:2%;background:#2E7D6F;min-width:22px">1</div></div><div class="bpct">0.3%</div></div>
+      <div class="barrow"><div class="bl">⑥ 入会規約同意</div><div class="bt"><div class="bf" style="width:2%;background:#8a8f98;min-width:22px">2</div></div><div class="bpct">0.5%</div></div>
+      <div class="barrow"><div class="bl">⑦ 決済完了（本入会）</div><div class="bt"><div class="bf" style="width:1%;background:#2E7D6F;min-width:22px">0</div></div><div class="bpct">0%</div></div>
       </div>
     </div>
 
@@ -697,13 +701,13 @@
 
   <div class="risk">
     <h3>握っておきたい論点</h3>
-    <p><b>①実施→入会の転換（最重要）</b>——予約47名・実施報告29件まで進み、8/1に初の入会規約同意（野間万莉絵さん）が誕生。ファネルは最下流手前まで到達した。ここからは<b>実施した人をどれだけ入会・決済に転換できるか</b>が主戦場。実施29に対し規約同意1・決済完了0で、転換率の改善が最重要KPIに。「支払い登録しても受講開始が先」問題（初月月謝の扱い・受講開始タイミングの見せ方）が入会率に直接効く。　<b>②入会システムの安定化</b>——8/2稼働の入会フロー（フォーム→プラン選択→Stripe）は、体験フォームとwebhookエンドポイント共通による文言誤配信が発生し、formType分岐で解消済み。決済まわりの安定運用とStripe通知の監視が要る。　<b>③流入経路の効果測定</b>——8/5にroute別トラッキング（流入経路ID列）を実装。Instagram・YouTube等の外部流入をこれから経路別に評価し、獲得効率の良い導線に寄せていく段階。実施報告フローは「無料体験レッスン完了報告」シートで稼働し、Falseは残り1件まで減った。　<b>④MP+登録ハードルのトレードオフ</b>——2ルート比較で、MP+登録必須（ルートB・伊藤さん）は配信母数比の日程確定CVR 0.12%とルートA（0.47%）を下回る。登録という1段のハードルが体験到達数を削る一方、LINE登録→規約同意はB 14.8%＞A 11%と登録者の本気度は高い。加えてルートAはボタンタップ→LINE登録で4割強が離脱（登録到達56.9%）。　<b>⑤広告出稿フェーズの費用対効果</b>——14万円/2週間の広告出稿を開始。継続はFORITのCPAで判断予定。　<b>⑥アカウント獲得ユニットとのカニバリ</b>——まねき等の別導線は上部トグルで切り替え表示にする方針で合意。</p>
+    <p><b>①実施→入会の転換（最重要）</b>——予約47名・実施報告29件まで進み、8/1に初の入会規約同意（野間さん）が誕生、8/6に小池さんが続き2名に。ここからは<b>実施した人をどれだけ入会・決済に転換できるか</b>が主戦場。実施29に対し規約同意2・決済完了0で、転換率の改善が最重要KPIに。「支払い登録しても受講開始が先」問題（初月月謝の扱い・受講開始タイミングの見せ方）が入会率に直接効く。　<b>②入会システムの安定化</b>——8/2稼働の入会フロー（フォーム→プラン選択→Stripe）は、体験フォームとwebhookエンドポイント共通による文言誤配信が発生し、formType分岐で解消済み。決済まわりの安定運用とStripe通知の監視が要る。　<b>③流入経路の効果測定</b>——8/5にroute別トラッキング（流入経路ID列）を実装。Instagram・YouTube等の外部流入をこれから経路別に評価し、獲得効率の良い導線に寄せていく段階。実施報告フローは「無料体験レッスン完了報告」シートで稼働し、Falseは残り1件まで減った。　<b>④MP+登録ハードルのトレードオフ</b>——2ルート比較で、MP+登録必須（ルートB・伊藤さん）は配信母数比の日程確定CVR 0.12%とルートA（0.47%）を下回る。登録という1段のハードルが体験到達数を削る一方、LINE登録→規約同意はB 14.8%＞A 11%と登録者の本気度は高い。加えてルートAはボタンタップ→LINE登録で4割強が離脱（登録到達56.9%）。　<b>⑤広告出稿フェーズの費用対効果</b>——14万円/2週間の広告出稿を開始。継続はFORITのCPAで判断予定。　<b>⑥アカウント獲得ユニットとのカニバリ</b>——まねき等の別導線は上部トグルで切り替え表示にする方針で合意。</p>
   </div>
 
   <footer>
     Studio LUMINA 事業ダッシュボード<br>
     出典：Slack #proj-ボイトレ事業-studio-lumina のメッセージ・スレッド、および共有Google Drive（覚書・利用規約・重要事項表示・営業資料）。<br>
-    数値・ステータスは2026年8月5日時点。ファネル実数（LINE登録・同意・予約・実施・入会）は共有Drive「LUMINA顧客管理」スプレッドの実データを集計。実施は「体験完了」列=Trueの報告ベース29件を主指標に（日程経過ベースは30件、差1は無断キャンセル）。入会規約同意は入会規約同意シートで野間万莉絵さん1名がTrue。決済完了（クレカ登録）はまだ0件。同意はフォーム受け口2系統で61〜75件の幅。転換率のルートA/BはLUMINAアタック数値シートに準拠。8/5にroute別の流入経路ID列が新設された。
+    数値・ステータスは2026年8月5日時点。ファネル実数（LINE登録・同意・予約・実施・入会）は共有Drive「LUMINA顧客管理」スプレッドの実データを集計。実施は「体験完了」列=Trueの報告ベース29件を主指標に（日程経過ベースは30件、差1は無断キャンセル）。入会規約同意は入会規約同意シートで2名がTrue（野間さん8/1・小池さん8/6）。決済完了（クレカ登録）はまだ0件。同意はフォーム受け口2系統で61〜75件の幅。転換率のルートA/BはLUMINAアタック数値シートに準拠。8/5にroute別の流入経路ID列が新設された。
   </footer>
 
 </div>
@@ -755,13 +759,26 @@
         if(el) applyDelta(el, deltaMap[key]);
       }
 
+      // --- 下流ファネル⑦ 決済完了（本入会）と 同意→決済 転換率 ---
+      if(d.funnel_down){
+        const joinN = d.funnel_down.join;
+        setText('[data-funnel="join"]', joinN);
+        // 同意→決済 転換率
+        const terms = d.funnel_down.terms_agree;
+        const frate = document.querySelector('[data-frate="terms-join"]');
+        if(frate && terms!=null && joinN!=null){
+          const p = terms>0 ? Math.round(joinN/terms*100) : 0;
+          frate.textContent = '同意→決済 ' + p + '%';
+        }
+      }
+
       // --- ファネルバー（①〜⑥を再描画・前日比付き）---
       if(d.bars_funnel){
         const box = document.getElementById('barchart-funnel');
         if(box){
           const fd = (d.funnel_down && d.funnel_down.delta) || {};
           // バーのラベル → deltaキーの対応
-          const barKey = ['line','reaction','consent','reserve','execute_reported','terms'];
+          const barKey = ['line','reaction','consent','reserve','execute_reported','terms','join'];
           box.innerHTML = d.bars_funnel.map((b,i)=>{
             const minw = b.minw ? `;min-width:${b.minw}px` : '';
             const dv = fd[barKey[i]];
