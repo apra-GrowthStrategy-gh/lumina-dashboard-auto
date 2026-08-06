@@ -52,6 +52,14 @@
   .kpi .n small{font-size:15px;font-weight:700;color:var(--ink2)}
   .kpi .l{font-size:12.5px;color:var(--ink2);margin-top:7px;font-weight:600}
   .kpi .s{font-size:11px;color:var(--ink2);opacity:.75;margin-top:2px}
+  .delta{display:inline-block;font-size:12px;font-weight:700;margin-left:6px;padding:1px 7px;border-radius:20px;vertical-align:middle}
+  .delta.up{background:rgba(46,125,111,.14);color:#2E7D6F}
+  .delta.flat{background:rgba(120,120,120,.12);color:#8a8a8a}
+  .delta.down{background:rgba(217,84,42,.14);color:var(--coral-d)}
+  .fdelta{font-size:11px;font-weight:700;margin-left:8px;padding:0 6px;border-radius:12px}
+  .fdelta.up{background:rgba(46,125,111,.16);color:#2E7D6F}
+  .fdelta.flat{background:rgba(120,120,120,.13);color:#8a8a8a}
+  .fdelta.down{background:rgba(217,84,42,.16);color:var(--coral-d)}
   .kpi.c1 .n{color:var(--coral)} .kpi.c2 .n{color:var(--teal)} .kpi.c3 .n{color:var(--indigo)} .kpi.c4 .n{color:var(--amber)}
 
   .sec{margin:46px 0 18px;display:flex;align-items:baseline;gap:14px}
@@ -295,10 +303,10 @@
   </div>
 
   <div class="kpis" id="kpis">
-    <div class="kpi c1"><div class="n"><span data-kpi="line-n">365</span><small>人</small></div><div class="l">LINE公式登録者</div><div class="s" data-kpi="line-sub">6/10〜8/4で積み上がり</div></div>
-    <div class="kpi c2"><div class="n"><span data-kpi="consent-n">75</span><small>件</small></div><div class="l">無料体験フォーム同意</div><div class="s" data-kpi="consent-sub">台帳化確実は61件</div></div>
-    <div class="kpi c3"><div class="n"><span data-kpi="reserve-n">47</span><small>名</small></div><div class="l">体験予約（実人数）</div><div class="s" data-kpi="reserve-sub">のべ47件・実施報告済み29件</div></div>
-    <div class="kpi c4"><div class="n"><span data-kpi="join-n">1</span><small>名</small></div><div class="l">入会規約同意</div><div class="s" data-kpi="join-sub">決済完了はこれから</div></div>
+    <div class="kpi c1"><div class="n"><span data-kpi="line-n">365</span><small>人</small><span class="delta flat" data-delta="line"></span></div><div class="l">LINE公式登録者</div><div class="s" data-kpi="line-sub">6/10〜8/4で積み上がり</div></div>
+    <div class="kpi c2"><div class="n"><span data-kpi="consent-n">75</span><small>件</small><span class="delta flat" data-delta="consent"></span></div><div class="l">無料体験フォーム同意</div><div class="s" data-kpi="consent-sub">台帳化確実は61件</div></div>
+    <div class="kpi c3"><div class="n"><span data-kpi="reserve-n">47</span><small>名</small><span class="delta flat" data-delta="reserve"></span></div><div class="l">体験予約（実人数）</div><div class="s" data-kpi="reserve-sub">のべ47件・実施報告済み29件</div></div>
+    <div class="kpi c4"><div class="n"><span data-kpi="join-n">1</span><small>名</small><span class="delta flat" data-delta="terms"></span></div><div class="l">入会規約同意</div><div class="s" data-kpi="join-sub">決済完了はこれから</div></div>
   </div>
   <div class="legend">
     <span><i style="background:var(--done)"></i>完了・稼働中</span>
@@ -734,13 +742,31 @@
         }
       }
 
-      // --- ファネルバー（①〜⑥を再描画）---
+      // --- 前日比バッジ（KPI）---
+      // joinのバッジはterms由来（data-delta="terms"）
+      const deltaMap = {
+        line: d.kpi && d.kpi.line && d.kpi.line.delta,
+        consent: d.kpi && d.kpi.consent && d.kpi.consent.delta,
+        reserve: d.kpi && d.kpi.reserve && d.kpi.reserve.delta,
+        terms: d.kpi && d.kpi.join && d.kpi.join.delta
+      };
+      for(const key in deltaMap){
+        const el = document.querySelector(`[data-delta="${key}"]`);
+        if(el) applyDelta(el, deltaMap[key]);
+      }
+
+      // --- ファネルバー（①〜⑥を再描画・前日比付き）---
       if(d.bars_funnel){
         const box = document.getElementById('barchart-funnel');
         if(box){
-          box.innerHTML = d.bars_funnel.map(b=>{
+          const fd = (d.funnel_down && d.funnel_down.delta) || {};
+          // バーのラベル → deltaキーの対応
+          const barKey = ['line','reaction','consent','reserve','execute_reported','terms'];
+          box.innerHTML = d.bars_funnel.map((b,i)=>{
             const minw = b.minw ? `;min-width:${b.minw}px` : '';
-            return `<div class="barrow"><div class="bl">${esc(b.label)}</div>`+
+            const dv = fd[barKey[i]];
+            const badge = deltaBadge(dv, 'fdelta');
+            return `<div class="barrow"><div class="bl">${esc(b.label)}${badge}</div>`+
               `<div class="bt"><div class="bf" style="width:${b.w}%;background:${b.color}${minw}">${esc(b.n)}</div></div>`+
               `<div class="bpct">${esc(b.pct)}</div></div>`;
           }).join('');
@@ -755,6 +781,24 @@
       if(val==null) return;
       const el = document.querySelector(sel);
       if(el) el.textContent = val;
+    }
+    // 前日比バッジをspan要素に適用
+    function applyDelta(el, v){
+      if(v==null){ el.textContent=''; el.className='delta flat'; return; }
+      const cls = v>0 ? 'up' : (v<0 ? 'down' : 'flat');
+      el.className = 'delta ' + cls;
+      el.textContent = fmtDelta(v);
+    }
+    // 前日比バッジのHTML文字列を返す（ファネル用）
+    function deltaBadge(v, base){
+      if(v==null || v===0) return '';  // 0や無しはバー側では出さない（うるさくならないよう）
+      const cls = v>0 ? 'up' : 'down';
+      return `<span class="${base} ${cls}">${fmtDelta(v)}</span>`;
+    }
+    function fmtDelta(v){
+      if(v>0) return '+'+v;
+      if(v<0) return String(v);   // 例: -2
+      return '±0';
     }
     function esc(x){
       return String(x==null?'':x)
