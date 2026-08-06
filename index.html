@@ -45,8 +45,9 @@
   .verdict p{font-size:15.5px;position:relative;z-index:1}
   .verdict b{color:var(--amber)}
 
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 8px}
-  @media(max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}}
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:26px 0 8px}
+  @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:600px){.kpis{grid-template-columns:repeat(2,1fr)}}
   .kpi{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 16px;box-shadow:var(--glow);position:relative}
   .kpi .n{font-size:32px;font-weight:800;letter-spacing:.5px;line-height:1}
   .kpi .n small{font-size:15px;font-weight:700;color:var(--ink2)}
@@ -305,9 +306,9 @@
 
   <div class="kpis" id="kpis">
     <div class="kpi c1"><div class="n"><span data-kpi="line-n">365</span><small>人</small><span class="delta flat" data-delta="line"></span></div><div class="l">LINE公式登録者</div><div class="s" data-kpi="line-sub">6/10〜8/4で積み上がり</div></div>
-    <div class="kpi c2"><div class="n"><span data-kpi="consent-n">75</span><small>件</small><span class="delta flat" data-delta="consent"></span></div><div class="l">無料体験フォーム同意</div><div class="s" data-kpi="consent-sub">台帳化確実は61件</div></div>
-    <div class="kpi c3"><div class="n"><span data-kpi="reserve-n">47</span><small>名</small><span class="delta flat" data-delta="reserve"></span></div><div class="l">体験予約（実人数）</div><div class="s" data-kpi="reserve-sub">のべ47件・実施報告済み29件</div></div>
-    <div class="kpi c4"><div class="n"><span data-kpi="join-n">2</span><small>名</small><span class="delta flat" data-delta="terms"></span></div><div class="l">入会規約同意</div><div class="s" data-kpi="join-sub">決済完了はこれから</div></div>
+    <div class="kpi c2"><div class="n"><span data-kpi="execute-n">29</span><small>件</small><span class="delta flat" data-delta="execute_reported"></span></div><div class="l">無料レッスン実施</div><div class="s" data-kpi="execute-sub">体験完了フラグ・報告ベース</div></div>
+    <div class="kpi c3"><div class="n"><span data-kpi="terms-n">2</span><small>名</small><span class="delta flat" data-delta="terms"></span></div><div class="l">入会規約同意</div><div class="s" data-kpi="terms-sub">野間さん8/1・小池さん8/6</div></div>
+    <div class="kpi c4"><div class="n"><span data-kpi="pay-n">0</span><small>名</small><span class="delta flat" data-delta="join"></span></div><div class="l">決済完了（本入会）🎉</div><div class="s" data-kpi="pay-sub">クレカ登録＝True・最終ゴール</div></div>
   </div>
   <div class="legend">
     <span><i style="background:var(--done)"></i>完了・稼働中</span>
@@ -737,9 +738,9 @@
       // --- 基準日 ---
       setText('[data-meta="as-of"]', d.meta && d.meta.as_of);
 
-      // --- KPI ---
+      // --- KPI（LINE登録・無料レッスン実施・入会規約同意・決済完了）---
       if(d.kpi){
-        for(const key of ['line','consent','reserve','join']){
+        for(const key of ['line','execute','terms','pay']){
           const k = d.kpi[key]; if(!k) continue;
           setText(`[data-kpi="${key}-n"]`, k.n);
           setText(`[data-kpi="${key}-sub"]`, k.sub);
@@ -747,12 +748,13 @@
       }
 
       // --- 前日比バッジ（KPI）---
-      // joinのバッジはterms由来（data-delta="terms"）
+      // 各KPIのバッジは funnel_down.delta の対応キーを使う
+      const fdAll = (d.funnel_down && d.funnel_down.delta) || {};
       const deltaMap = {
-        line: d.kpi && d.kpi.line && d.kpi.line.delta,
-        consent: d.kpi && d.kpi.consent && d.kpi.consent.delta,
-        reserve: d.kpi && d.kpi.reserve && d.kpi.reserve.delta,
-        terms: d.kpi && d.kpi.join && d.kpi.join.delta
+        line: fdAll.line,
+        execute_reported: fdAll.execute_reported,
+        terms: fdAll.terms,
+        join: fdAll.join
       };
       for(const key in deltaMap){
         const el = document.querySelector(`[data-delta="${key}"]`);
