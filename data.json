@@ -21,7 +21,7 @@
       "delta": 0
     },
     "join": {
-      "n": 1,
+      "n": 2,
       "sub": "決済完了はこれから",
       "delta": 0
     }
@@ -39,7 +39,7 @@
     "execute_elapsed": 32,
     "future_reserve": 16,
     "join": 0,
-    "terms_agree": 1,
+    "terms_agree": 2,
     "delta": {
       "line": 0,
       "consent": 0,
@@ -56,7 +56,7 @@
       "consent": "21%",
       "consent_to_reserve": "62%",
       "reserve_to_execute": "60%",
-      "execute_to_join": "3%"
+      "execute_to_join": "7%"
     }
   },
   "dist": {
