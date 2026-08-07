@@ -32,8 +32,8 @@
     "consent_certain": 61,
     "reserve": 48,
     "execute_reported": 29,
-    "execute_elapsed": 33,
-    "future_reserve": 15,
+    "execute_elapsed": 34,
+    "future_reserve": 14,
     "join": 3,
     "terms_agree": 3,
     "delta": {
@@ -43,8 +43,8 @@
       "terms": 0,
       "reaction": 0,
       "execute_reported": 0,
-      "execute_elapsed": 0,
-      "future_reserve": 0,
+      "execute_elapsed": 1,
+      "future_reserve": -1,
       "join": 0
     },
     "rates": {
@@ -57,8 +57,8 @@
   },
   "dist": {
     "caption": "予約された体験日ベース・実施済み／今後で色分け（のべ48件）",
-    "legend_done": "実施済み（8/7まで）33件",
-    "legend_plan": "今後の予約 15件",
+    "legend_done": "実施済み（8/7まで）34件",
+    "legend_plan": "今後の予約 13件",
     "max": 6,
     "bars": [
       {
@@ -138,8 +138,8 @@
       },
       {
         "label": "8/7",
-        "v": 2,
-        "t": "plan"
+        "v": 1,
+        "t": "done"
       },
       {
         "label": "8/8",
