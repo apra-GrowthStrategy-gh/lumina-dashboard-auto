@@ -14,7 +14,7 @@
       "sub": "体験完了フラグ・報告ベース"
     },
     "terms": {
-      "n": 3,
+      "n": 4,
       "sub": "入会規約に同意"
     },
     "pay": {
@@ -32,19 +32,19 @@
     "consent_certain": 61,
     "reserve": 48,
     "execute_reported": 29,
-    "execute_elapsed": 37,
-    "future_reserve": 11,
+    "execute_elapsed": 38,
+    "future_reserve": 10,
     "join": 3,
-    "terms_agree": 3,
+    "terms_agree": 4,
     "delta": {
       "line": 0,
       "consent": 0,
       "reserve": 0,
-      "terms": 0,
+      "terms": 1,
       "reaction": 0,
       "execute_reported": 0,
-      "execute_elapsed": 2,
-      "future_reserve": -2,
+      "execute_elapsed": 3,
+      "future_reserve": -3,
       "join": 0
     },
     "rates": {
@@ -52,12 +52,12 @@
       "consent": "21%",
       "consent_to_reserve": "62%",
       "reserve_to_execute": "60%",
-      "execute_to_join": "10%"
+      "execute_to_join": "14%"
     }
   },
   "dist": {
     "caption": "予約された体験日ベース・実施済み／今後で色分け（のべ48件）",
-    "legend_done": "実施済み（8/8まで）37件",
+    "legend_done": "実施済み（8/8まで）38件",
     "legend_plan": "今後の予約 10件",
     "max": 6,
     "bars": [
@@ -143,7 +143,7 @@
       },
       {
         "label": "8/8",
-        "v": 2,
+        "v": 3,
         "t": "done"
       },
       {
