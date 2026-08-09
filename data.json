@@ -30,35 +30,35 @@
     "reaction": 70,
     "consent": 77,
     "consent_certain": 61,
-    "reserve": 48,
+    "reserve": 49,
     "execute_reported": 29,
     "execute_elapsed": 39,
-    "future_reserve": 9,
+    "future_reserve": 10,
     "join": 4,
     "terms_agree": 6,
     "delta": {
       "line": 1,
       "consent": 0,
-      "reserve": 0,
+      "reserve": 1,
       "terms": 0,
       "reaction": 0,
       "execute_reported": 0,
       "execute_elapsed": 1,
-      "future_reserve": -1,
+      "future_reserve": 0,
       "join": 0
     },
     "rates": {
       "reaction": "19%",
       "consent": "21%",
-      "consent_to_reserve": "62%",
-      "reserve_to_execute": "60%",
+      "consent_to_reserve": "64%",
+      "reserve_to_execute": "59%",
       "execute_to_join": "21%"
     }
   },
   "dist": {
-    "caption": "予約された体験日ベース・実施済み／今後で色分け（のべ48件）",
+    "caption": "予約された体験日ベース・実施済み／今後で色分け（のべ49件）",
     "legend_done": "実施済み（8/9まで）39件",
-    "legend_plan": "今後の予約 6件",
+    "legend_plan": "今後の予約 7件",
     "max": 6,
     "bars": [
       {
@@ -173,6 +173,11 @@
       },
       {
         "label": "8/17",
+        "v": 1,
+        "t": "plan"
+      },
+      {
+        "label": "8/23",
         "v": 1,
         "t": "plan"
       },
