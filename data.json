@@ -6,7 +6,7 @@
   },
   "kpi": {
     "line": {
-      "n": 370,
+      "n": 371,
       "sub": "6/10〜最新で積み上がり"
     },
     "execute": {
@@ -23,41 +23,41 @@
     }
   },
   "funnel_up": {
-    "line_registered": 370
+    "line_registered": 371
   },
   "funnel_down": {
-    "line": 370,
+    "line": 371,
     "reaction": 70,
-    "consent": 78,
+    "consent": 79,
     "consent_certain": 61,
     "reserve": 50,
     "execute_reported": 29,
-    "execute_elapsed": 40,
-    "future_reserve": 10,
+    "execute_elapsed": 41,
+    "future_reserve": 9,
     "join": 4,
     "terms_agree": 6,
     "delta": {
-      "line": 4,
-      "consent": 1,
+      "line": 5,
+      "consent": 2,
       "reserve": 2,
       "terms": 0,
       "reaction": 0,
       "execute_reported": 0,
-      "execute_elapsed": 2,
-      "future_reserve": 0,
+      "execute_elapsed": 3,
+      "future_reserve": -1,
       "join": 0
     },
     "rates": {
       "reaction": "19%",
       "consent": "21%",
-      "consent_to_reserve": "64%",
+      "consent_to_reserve": "63%",
       "reserve_to_execute": "58%",
       "execute_to_join": "21%"
     }
   },
   "dist": {
     "caption": "予約された体験日ベース・実施済み／今後で色分け（のべ50件）",
-    "legend_done": "実施済み（8/9まで）40件",
+    "legend_done": "実施済み（8/9まで）41件",
     "legend_plan": "今後の予約 8件",
     "max": 6,
     "bars": [
@@ -148,7 +148,7 @@
       },
       {
         "label": "8/9",
-        "v": 2,
+        "v": 3,
         "t": "done"
       },
       {
@@ -194,8 +194,8 @@
     ]
   },
   "cumulative": {
-    "caption": "6/10〜最新 → 累積370人",
-    "total": 370,
+    "caption": "6/10〜最新 → 累積371人",
+    "total": 371,
     "points": [
       {
         "d": "6/10",
@@ -439,7 +439,7 @@
       },
       {
         "d": "8/9",
-        "v": 370
+        "v": 371
       }
     ],
     "markers": [
