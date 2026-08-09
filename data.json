@@ -1,7 +1,7 @@
 {
   "meta": {
-    "as_of": "2026年8月9日時点",
-    "as_of_date": "2026-08-09",
+    "as_of": "2026年8月10日時点",
+    "as_of_date": "2026-08-10",
     "source_note": "全数字の出所は共有Drive「LUMINA顧客管理」スプレッド。配信対象者数のみSlack配信報告。"
   },
   "kpi": {
@@ -10,7 +10,7 @@
       "sub": "6/10〜最新で積み上がり"
     },
     "execute": {
-      "n": 29,
+      "n": 30,
       "sub": "体験完了フラグ・報告ベース"
     },
     "terms": {
@@ -31,33 +31,33 @@
     "consent": 81,
     "consent_certain": 61,
     "reserve": 50,
-    "execute_reported": 29,
+    "execute_reported": 30,
     "execute_elapsed": 42,
     "future_reserve": 8,
     "join": 4,
     "terms_agree": 7,
     "delta": {
-      "line": 6,
-      "consent": 4,
-      "reserve": 2,
-      "terms": 1,
+      "line": 0,
+      "consent": 0,
+      "reserve": 0,
+      "terms": 0,
       "reaction": 0,
-      "execute_reported": 0,
-      "execute_elapsed": 4,
-      "future_reserve": -2,
+      "execute_reported": 1,
+      "execute_elapsed": 0,
+      "future_reserve": 0,
       "join": 0
     },
     "rates": {
       "reaction": "19%",
       "consent": "22%",
       "consent_to_reserve": "62%",
-      "reserve_to_execute": "58%",
-      "execute_to_join": "24%"
+      "reserve_to_execute": "60%",
+      "execute_to_join": "23%"
     }
   },
   "dist": {
     "caption": "予約された体験日ベース・実施済み／今後で色分け（のべ50件）",
-    "legend_done": "実施済み（8/9まで）42件",
+    "legend_done": "実施済み（8/10まで）42件",
     "legend_plan": "今後の予約 8件",
     "max": 6,
     "bars": [
