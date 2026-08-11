@@ -14,7 +14,7 @@
       "sub": "体験完了フラグ・報告ベース"
     },
     "terms": {
-      "n": 6,
+      "n": 7,
       "sub": "入会規約に同意"
     },
     "pay": {
@@ -35,12 +35,12 @@
     "execute_elapsed": 44,
     "future_reserve": 8,
     "join": 6,
-    "terms_agree": 6,
+    "terms_agree": 7,
     "delta": {
       "line": 0,
       "consent": 0,
       "reserve": 1,
-      "terms": -1,
+      "terms": 0,
       "reaction": 0,
       "execute_reported": 0,
       "execute_elapsed": 1,
@@ -52,7 +52,7 @@
       "consent": "22%",
       "consent_to_reserve": "63%",
       "reserve_to_execute": "58%",
-      "execute_to_join": "20%"
+      "execute_to_join": "23%"
     }
   },
   "dist": {
