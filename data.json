@@ -6,7 +6,7 @@
   },
   "kpi": {
     "line": {
-      "n": 373,
+      "n": 374,
       "sub": "6/10〜最新で積み上がり"
     },
     "execute": {
@@ -23,10 +23,10 @@
     }
   },
   "funnel_up": {
-    "line_registered": 373
+    "line_registered": 374
   },
   "funnel_down": {
-    "line": 373,
+    "line": 374,
     "reaction": 70,
     "consent": 82,
     "consent_certain": 61,
@@ -37,7 +37,7 @@
     "join": 6,
     "terms_agree": 7,
     "delta": {
-      "line": 0,
+      "line": 1,
       "consent": 0,
       "reserve": 0,
       "terms": 0,
@@ -199,8 +199,8 @@
     ]
   },
   "cumulative": {
-    "caption": "6/10〜最新 → 累積373人",
-    "total": 373,
+    "caption": "6/10〜最新 → 累積374人",
+    "total": 374,
     "points": [
       {
         "d": "6/10",
@@ -456,7 +456,7 @@
       },
       {
         "d": "8/12",
-        "v": 373
+        "v": 374
       }
     ],
     "markers": [
