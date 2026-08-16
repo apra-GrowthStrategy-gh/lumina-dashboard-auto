@@ -1,7 +1,7 @@
 {
   "meta": {
-    "as_of": "2026年8月16日時点",
-    "as_of_date": "2026-08-16",
+    "as_of": "2026年8月17日時点",
+    "as_of_date": "2026-08-17",
     "source_note": "全数字の出所は共有Drive「LUMINA顧客管理」スプレッド。配信対象者数のみSlack配信報告。"
   },
   "kpi": {
@@ -37,14 +37,14 @@
     "join": 7,
     "terms_agree": 7,
     "delta": {
-      "line": 2,
-      "consent": 1,
-      "reserve": -1,
-      "terms": -1,
+      "line": 0,
+      "consent": 0,
+      "reserve": 0,
+      "terms": 0,
       "reaction": 0,
-      "execute_reported": 11,
+      "execute_reported": 0,
       "execute_elapsed": 0,
-      "future_reserve": -1,
+      "future_reserve": 0,
       "join": 0
     },
     "rates": {
@@ -57,7 +57,7 @@
   },
   "dist": {
     "caption": "予約された体験日ベース・実施済み／今後で色分け（のべ53件）",
-    "legend_done": "実施済み（8/16まで）46件",
+    "legend_done": "実施済み（8/17まで）46件",
     "legend_plan": "今後の予約 7件",
     "max": 6,
     "bars": [
