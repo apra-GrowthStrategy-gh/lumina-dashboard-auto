@@ -10,7 +10,7 @@
       "sub": "6/10〜最新で積み上がり"
     },
     "execute": {
-      "n": 31,
+      "n": 0,
       "sub": "体験完了フラグ・報告ベース"
     },
     "terms": {
@@ -31,7 +31,7 @@
     "consent": 85,
     "consent_certain": 61,
     "reserve": 53,
-    "execute_reported": 31,
+    "execute_reported": 0,
     "execute_elapsed": 46,
     "future_reserve": 7,
     "join": 7,
@@ -42,7 +42,7 @@
       "reserve": -1,
       "terms": 0,
       "reaction": 0,
-      "execute_reported": 1,
+      "execute_reported": -30,
       "execute_elapsed": 0,
       "future_reserve": -1,
       "join": 0
@@ -51,8 +51,8 @@
       "reaction": "18%",
       "consent": "22%",
       "consent_to_reserve": "62%",
-      "reserve_to_execute": "58%",
-      "execute_to_join": "26%"
+      "reserve_to_execute": "0%",
+      "execute_to_join": "0%"
     }
   },
   "dist": {
