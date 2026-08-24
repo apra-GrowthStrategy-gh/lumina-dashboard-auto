@@ -28,7 +28,7 @@
   "funnel_down": {
     "line": 389,
     "reaction": 70,
-    "consent": 90,
+    "consent": 91,
     "consent_certain": 61,
     "reserve": 56,
     "execute_reported": 42,
@@ -38,7 +38,7 @@
     "terms_agree": 7,
     "delta": {
       "line": 0,
-      "consent": 0,
+      "consent": 1,
       "reserve": 0,
       "terms": 0,
       "reaction": 0,
