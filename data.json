@@ -6,7 +6,7 @@
   },
   "kpi": {
     "line": {
-      "n": 391,
+      "n": 392,
       "sub": "6/10〜最新で積み上がり"
     },
     "execute": {
@@ -23,10 +23,10 @@
     }
   },
   "funnel_up": {
-    "line_registered": 391
+    "line_registered": 392
   },
   "funnel_down": {
-    "line": 391,
+    "line": 392,
     "reaction": 70,
     "consent": 92,
     "consent_certain": 61,
@@ -37,7 +37,7 @@
     "join": 8,
     "terms_agree": 8,
     "delta": {
-      "line": 2,
+      "line": 3,
       "consent": 1,
       "reserve": -1,
       "terms": 0,
@@ -49,7 +49,7 @@
     },
     "rates": {
       "reaction": "18%",
-      "consent": "24%",
+      "consent": "23%",
       "consent_to_reserve": "60%",
       "reserve_to_execute": "76%",
       "execute_to_join": "19%"
@@ -219,8 +219,8 @@
     ]
   },
   "cumulative": {
-    "caption": "6/10〜最新 → 累積391人",
-    "total": 391,
+    "caption": "6/10〜最新 → 累積392人",
+    "total": 392,
     "points": [
       {
         "d": "6/10",
@@ -532,7 +532,7 @@
       },
       {
         "d": "8/26",
-        "v": 391
+        "v": 392
       }
     ],
     "markers": [
