@@ -28,7 +28,7 @@
   "funnel_down": {
     "line": 396,
     "reaction": 70,
-    "consent": 95,
+    "consent": 96,
     "consent_certain": 61,
     "reserve": 55,
     "execute_reported": 42,
@@ -38,7 +38,7 @@
     "terms_agree": 8,
     "delta": {
       "line": 1,
-      "consent": 1,
+      "consent": 2,
       "reserve": 0,
       "terms": 0,
       "reaction": 0,
@@ -50,7 +50,7 @@
     "rates": {
       "reaction": "18%",
       "consent": "24%",
-      "consent_to_reserve": "58%",
+      "consent_to_reserve": "57%",
       "reserve_to_execute": "76%",
       "execute_to_join": "19%"
     }
