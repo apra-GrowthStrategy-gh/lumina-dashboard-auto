@@ -18,7 +18,7 @@
       "sub": "入会規約に同意"
     },
     "pay": {
-      "n": 8,
+      "n": 9,
       "sub": "クレカ登録＝True・最終ゴール"
     }
   },
@@ -34,7 +34,7 @@
     "execute_reported": 42,
     "execute_elapsed": 52,
     "future_reserve": 9,
-    "join": 8,
+    "join": 9,
     "terms_agree": 9,
     "delta": {
       "line": 0,
@@ -45,7 +45,7 @@
       "execute_reported": 0,
       "execute_elapsed": 1,
       "future_reserve": -1,
-      "join": 0
+      "join": 1
     },
     "rates": {
       "reaction": "18%",
